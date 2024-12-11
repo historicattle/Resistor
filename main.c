@@ -24,7 +24,7 @@ int main(){
     char buffer[10],temp[7];
 
 
-    printf("\t\tRESISTANCE CALCULATOR\n");
+    printf("\n\t\tRESISTANCE CALCULATOR\n\n");
     
     //Resistor Picture
     
@@ -93,15 +93,15 @@ void loadAnim(){
     int i,j,prog;
     printf("\n\n");
     for(j=0;j<7;j++){
-        for(prog=0;prog<25;prog++){
+        for(prog=0;prog<26;prog++){
             printf("\r%+35s: [",arr[j]);
             for(i=0;i<prog;i++){
                 printf("#");
             }
-            for(i=prog;i<24;i++){
+            for(i=prog;i<25;i++){
                 printf(" ");
             }
-            printf("]");
+            printf("] %d%%",4*prog);
             usleep(10000);
         }
         printf("\n");
